@@ -22,11 +22,9 @@ class Account extends Component {
   }
 
   render() {
-    if(this.state.balance === 0){
-      this.setState({balanceClass: `zero`})
-    }
+    
     return (
-      <div className={"account " + this.state.balanceClass}>
+      <div className={`account  ${this.state.balance ? "" : "zero"}`}>
         <h2>{this.props.name}</h2>
         <div className="balance">{this.state.balance}</div>
         <input type="text" ref='inputRef' placeholder="enter an amount" />
