@@ -13,9 +13,9 @@ class Account extends Component {
     this.setState({balance: parseInt(this.state.balance) + parseInt(this.refs.inputRef.value)})
   }
   withdrawClick = (e) =>{
-    const newBalance = parseInt(this.state.balance - this.refs.inputRef.value);
+    const newBalance = parseInt(this.state.balance) - parseInt(this.refs.inputRef.value);
     if(newBalance >= 0){
-      this.setState({balance: parseInt(this.state.balance - this.refs.inputRef.value)})
+      this.setState({balance: parseInt(this.state.balance) - parseInt(this.refs.inputRef.value)})
     } else {
       alert("Insufficient Funds");
     }
