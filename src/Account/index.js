@@ -10,7 +10,7 @@ class Account extends Component {
     }
   }
   depositClick = (e) =>{
-    this.setState({balance: parseInt(this.state.balance + this.refs.inputRef.value)})
+    this.setState({balance: parseInt(this.state.balance) + parseInt(this.refs.inputRef.value)})
   }
   withdrawClick = (e) =>{
     const newBalance = parseInt(this.state.balance - this.refs.inputRef.value);
